@@ -26,11 +26,12 @@
   <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="topbar">
   <div class="shell nav">
     <a class="wordmark" href="#home">Rohin Jayaram Krishnan, MD, MSc</a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav id="site-nav" aria-label="Primary navigation">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#training">Training</a>
@@ -42,16 +43,16 @@
   </div>
 </header>
 
-<main id="home">
-  <section class="hero">
+<main id="main-content">
+  <section id="home" class="hero">
     <div class="shell hero-grid">
       <div class="portrait-wrap">
         <img class="portrait" src="rohin-krishnan.png?v=10" alt="Rohin Jayaram Krishnan">
       </div>
       <div class="hero-copy">
-        <p class="eyebrow">Emergency Medicine · Critical Care Medicine</p>
+        <p class="eyebrow">Emergency Medicine <span aria-hidden="true">·</span> Critical Care Medicine</p>
         <h1>Rohin Jayaram<br>Krishnan, MD, MSc</h1>
-        <div class="gold-rule"></div>
+        <div class="gold-rule" aria-hidden="true"></div>
         <h2>Critical Care Medicine Fellow</h2>
         <p class="institution">Dartmouth Hitchcock Medical Center</p>
         <p class="intro">Emergency Medicine physician with fellowship training in Critical Care Medicine and an academic background in clinical epidemiology, evidence-based medicine, systematic review, meta-analysis, and outcomes research.</p>
@@ -98,7 +99,7 @@
       <div>
         <p class="eyebrow">About</p>
         <h2>Clinical &amp; Academic Focus</h2>
-        <div class="gold-rule short"></div>
+        <div class="gold-rule short" aria-hidden="true"></div>
         <p>My training bridges Emergency Medicine and Critical Care Medicine, with interests in resuscitation, shock, critical illness, mechanical circulatory support, and the care of patients across the ED–ICU continuum.</p>
         <p>My research experience spans emergency medicine, critical care, perioperative medicine, clinical epidemiology, systematic review and meta-analysis, and outcomes research.</p>
       </div>
@@ -114,7 +115,7 @@
     <div class="shell">
       <p class="eyebrow">Research</p>
       <h2>Selected Research Experience</h2>
-      <div class="gold-rule short"></div>
+      <div class="gold-rule short" aria-hidden="true"></div>
       <div class="cards">
         <article><span class="date">2019–2022</span><h3>Syncope Research Group</h3><p>Department of Emergency Medicine, The Ottawa Hospital Research Institute.</p><small>Supervisor: Dr. Venkatesh Thiruganasambandamoorthy</small></article>
         <article><span class="date">2017–2022</span><h3>Center for Medical Evidence, Decision Integrity and Clinical Impact</h3><p>Department of Anesthesia and Perioperative Medicine, Western University.</p><small>Supervisor: Dr. Janet Martin</small></article>
@@ -128,7 +129,7 @@
     <div class="shell">
       <p class="eyebrow">Scholarship</p>
       <h2>Key Publications</h2>
-      <div class="gold-rule short"></div>
+      <div class="gold-rule short" aria-hidden="true"></div>
       <p class="section-intro">Selected peer-reviewed work. Publication titles link directly to the article or DOI.</p>
       <div class="pubs">
         <article><div class="year">2024</div><div><a href="https://doi.org/10.1016/j.amjsurg.2023.12.022" target="_blank" rel="noopener">Subtotal vs total cholecystectomy for difficult gallbladders: a systematic review and meta-analysis.</a><p>Koo SS, <b>Krishnan RJ</b>, et al. <i>American Journal of Surgery.</i> 2024;229:145–150.</p></div></article>
@@ -145,7 +146,7 @@
     <div class="shell">
       <p class="eyebrow">Academic Service</p>
       <h2>Teaching &amp; Leadership</h2>
-      <div class="gold-rule short"></div>
+      <div class="gold-rule short" aria-hidden="true"></div>
       <div class="cards compact">
         <article><h3>JABSOM Admissions</h3><p>Interviewer</p><small>2021–2022</small></article>
         <article><h3>Homeless Outreach Clinic</h3><p>Student Healthcare Provider</p><small>2020–2021</small></article>
@@ -188,11 +189,17 @@
     </div>
   </section>
 </main>
-<footer><div class="shell">© 2026 Rohin Jayaram Krishnan, MD, MSc</div></footer>
+<footer><div class="shell">© <span id="year">2026</span> Rohin Jayaram Krishnan, MD, MSc</div></footer>
 <script>
 const b=document.querySelector('.menu-toggle');
-b.addEventListener('click',()=>document.body.classList.toggle('menu-open'));
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+const closeMenu=()=>{document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation')};
+b.addEventListener('click',()=>{const open=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',String(open));b.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+document.getElementById('year').textContent=new Date().getFullYear();
+const sections=[...document.querySelectorAll('main section[id]')];
+const navLinks=[...document.querySelectorAll('nav a')];
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(link=>link.removeAttribute('aria-current'));document.querySelector(`nav a[href="#${entry.target.id}"]`)?.setAttribute('aria-current','page')}}),{rootMargin:'-35% 0px -60%'});sections.forEach(section=>observer.observe(section))}
 </script>
 </body>
 </html>
