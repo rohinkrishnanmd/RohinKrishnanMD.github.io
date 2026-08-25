@@ -61,3 +61,11 @@ a.orcid img{display:block;width:24px;height:24px;flex:none}
 /* Publication profile links */
 .publication-profiles{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 16px}
 @media(max-width:600px){.publication-profiles{display:grid}.publication-profiles .btn{width:100%}}
+
+/* Icon links beneath Key Publications */
+.publication-profiles{justify-content:flex-start;margin:-10px 0 25px}
+.profile-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(219,162,75,.75);border-radius:50%;color:#f6e9d3;text-decoration:none;transition:transform .2s,background .2s,border-color .2s}
+.profile-icon img{display:block;width:25px;height:25px}
+.profile-icon svg{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.profile-icon:hover{transform:translateY(-2px);background:rgba(219,162,75,.1);border-color:var(--gold-light)}
+@media(max-width:600px){.publication-profiles{display:flex}.profile-icon{width:44px;height:44px}}
