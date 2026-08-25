@@ -10,6 +10,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 /* Prominent professional profile link */
+.contact h2{margin-inline:auto}
 .identity-line{margin:18px 0 0;color:#dce4e9;font-size:.76rem;font-weight:800;letter-spacing:.11em;line-height:1.6;text-transform:uppercase}
 .identity-line span{margin:0 .45em;color:var(--gold-light)}
 .social-links{margin-top:22px}
