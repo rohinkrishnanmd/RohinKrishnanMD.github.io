@@ -29,3 +29,8 @@ a.linkedin svg{width:19px;height:19px;flex:none}
 .copy-email:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
 .copy-status{min-height:1.2em;margin:8px 0 0;color:var(--gold-light);font-size:.78rem}
 @media(max-width:600px){.cv-actions{display:grid}.cv-actions .btn{width:100%}.email-actions{flex-direction:column;gap:12px}.copy-email{width:40px}}
+
+/* RJK brand mark */
+.wordmark{display:inline-flex;align-items:center;gap:11px}
+.wordmark img{display:block;width:42px;height:42px;object-fit:contain;flex:none}
+@media(max-width:600px){.wordmark{gap:8px}.wordmark img{width:36px;height:36px}.wordmark span{min-width:0}}
