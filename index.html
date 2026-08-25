@@ -60,6 +60,7 @@
         <p class="intro">Emergency Medicine physician and Critical Care Medicine fellow with expertise in acute resuscitation and shock management. My clinical focus spans the ED–ICU continuum, with particular interests in cardiac critical care, advanced hemodynamics, and mechanical circulatory support.</p>
         <div class="actions">
           <a class="btn primary" href="Rohin_Krishnan_CV.pdf" target="_blank" rel="noopener">View Full CV</a>
+          <a class="btn" href="Rohin_Krishnan_CV.pdf" download>Download CV</a>
           <a class="btn" href="#publications">Key Publications</a>
           <a class="btn" href="mailto:rohinkrishnanMD@gmail.com">Email Me</a>
         </div>
@@ -163,7 +164,10 @@
       <p class="eyebrow">Curriculum Vitae</p>
       <h2>Full Academic CV</h2>
       <p>The complete CV includes all peer-reviewed publications, abstracts, presentations, invited talks, research awards, service, teaching, certifications, and memberships.</p>
-      <a class="btn primary" href="Rohin_Krishnan_CV.pdf" target="_blank" rel="noopener">Open Full CV</a>
+      <div class="cv-actions">
+        <a class="btn primary" href="Rohin_Krishnan_CV.pdf" target="_blank" rel="noopener">Open Full CV</a>
+        <a class="btn" href="Rohin_Krishnan_CV.pdf" download>Download CV</a>
+      </div>
     </div>
   </section>
 
@@ -171,7 +175,11 @@
     <div class="shell center">
       <p class="eyebrow">Contact</p>
       <h2>Get in Touch</h2>
-      <a class="email" href="mailto:rohinkrishnanMD@gmail.com">rohinkrishnanMD@gmail.com</a>
+      <div class="email-actions">
+        <a class="email" href="mailto:rohinkrishnanMD@gmail.com">rohinkrishnanMD@gmail.com</a>
+        <button class="copy-email" type="button" data-email="rohinkrishnanMD@gmail.com" aria-describedby="copy-status">Copy email</button>
+      </div>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
       <div class="social-links">
   <a href="https://www.linkedin.com/in/rohin-krishnan-9b247878"
      target="_blank"
@@ -199,6 +207,28 @@ b.addEventListener('click',()=>{const open=document.body.classList.toggle('menu-
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 document.getElementById('year').textContent=new Date().getFullYear();
+const copyEmail=document.querySelector('.copy-email');
+const copyStatus=document.getElementById('copy-status');
+copyEmail?.addEventListener('click',async()=>{
+  const email=copyEmail.dataset.email;
+  try{
+    await navigator.clipboard.writeText(email);
+    copyEmail.textContent='Copied!';
+    copyStatus.textContent='Email address copied to clipboard.';
+  }catch{
+    const input=document.createElement('textarea');
+    input.value=email;
+    input.style.position='fixed';
+    input.style.opacity='0';
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    input.remove();
+    copyEmail.textContent='Copied!';
+    copyStatus.textContent='Email address copied to clipboard.';
+  }
+  window.setTimeout(()=>{copyEmail.textContent='Copy email';copyStatus.textContent=''},2200);
+});
 const sections=[...document.querySelectorAll('main section[id]')];
 const navLinks=[...document.querySelectorAll('nav a')];
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(link=>link.removeAttribute('aria-current'));document.querySelector(`nav a[href="#${entry.target.id}"]`)?.setAttribute('aria-current','page')}}),{rootMargin:'-35% 0px -60%'});sections.forEach(section=>observer.observe(section))}
