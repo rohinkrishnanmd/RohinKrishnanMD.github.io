@@ -34,3 +34,7 @@ a.linkedin svg{width:19px;height:19px;flex:none}
 .wordmark{display:inline-flex;align-items:center;gap:11px}
 .wordmark img{display:block;width:42px;height:42px;object-fit:contain;flex:none}
 @media(max-width:600px){.wordmark{gap:8px}.wordmark img{width:36px;height:36px}.wordmark span{min-width:0}}
+
+/* ORCID profile */
+.social-links{gap:12px;flex-wrap:wrap}
+a.orcid img{display:block;width:24px;height:24px;flex:none}
