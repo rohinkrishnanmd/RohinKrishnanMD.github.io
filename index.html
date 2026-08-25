@@ -176,12 +176,11 @@
       <h2>Get in Touch</h2>
       <div class="email-actions">
         <a class="email" href="mailto:rohinkrishnanMD@gmail.com">rohinkrishnanMD@gmail.com</a>
-        <button class="copy-email" type="button" data-email="rohinkrishnanMD@gmail.com" aria-describedby="copy-status" aria-label="Copy email address">
+        <button class="copy-email" type="button" data-email="rohinkrishnanMD@gmail.com" aria-describedby="copy-status" aria-label="Copy email address" title="Copy email address">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="8" y="8" width="11" height="11" rx="2"></rect>
             <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
           </svg>
-          <span>Copy</span>
         </button>
       </div>
       <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
@@ -218,7 +217,7 @@ copyEmail?.addEventListener('click',async()=>{
   const email=copyEmail.dataset.email;
   try{
     await navigator.clipboard.writeText(email);
-    copyEmail.querySelector('span').textContent='Copied!';
+    copyEmail.setAttribute('aria-label','Email copied');
     copyStatus.textContent='Email address copied to clipboard.';
   }catch{
     const input=document.createElement('textarea');
@@ -229,10 +228,10 @@ copyEmail?.addEventListener('click',async()=>{
     input.select();
     document.execCommand('copy');
     input.remove();
-    copyEmail.querySelector('span').textContent='Copied!';
+    copyEmail.setAttribute('aria-label','Email copied');
     copyStatus.textContent='Email address copied to clipboard.';
   }
-  window.setTimeout(()=>{copyEmail.querySelector('span').textContent='Copy';copyStatus.textContent=''},2200);
+  window.setTimeout(()=>{copyEmail.setAttribute('aria-label','Copy email address');copyStatus.textContent=''},2200);
 });
 const sections=[...document.querySelectorAll('main section[id]')];
 const navLinks=[...document.querySelectorAll('nav a')];
