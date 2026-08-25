@@ -10,6 +10,10 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 /* Prominent professional profile link */
+.identity-line{margin:18px 0 0;color:#dce4e9;font-size:.76rem;font-weight:800;letter-spacing:.11em;line-height:1.6;text-transform:uppercase}
+.identity-line span{margin:0 .45em;color:var(--gold-light)}
 .social-links{margin-top:22px}
 a.linkedin{width:auto;height:auto;min-height:48px;padding:0 22px;gap:10px;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
 a.linkedin svg{width:19px;height:19px;flex:none}
+
+@media(max-width:600px){.identity-line{font-size:.68rem;letter-spacing:.075em}.identity-line span{margin:0 .2em}}
