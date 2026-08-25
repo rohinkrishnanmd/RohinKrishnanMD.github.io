@@ -18,3 +18,13 @@ a.linkedin{width:auto;height:auto;min-height:48px;padding:0 22px;gap:10px;border
 a.linkedin svg{width:19px;height:19px;flex:none}
 
 @media(max-width:600px){.identity-line{font-size:.68rem;letter-spacing:.075em}.identity-line span{margin:0 .2em}}
+
+/* CV download and copy-email controls */
+.cv-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.email-actions{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}
+.email-actions .email{margin-top:0}
+.copy-email{min-height:40px;padding:9px 16px;border:1px solid rgba(219,162,75,.8);border-radius:999px;background:transparent;color:#f6e9d3;font:800 .68rem var(--sans);letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+.copy-email:hover{transform:translateY(-2px);background:rgba(219,162,75,.1);border-color:var(--gold-light)}
+.copy-email:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+.copy-status{min-height:1.2em;margin:8px 0 0;color:var(--gold-light);font-size:.78rem}
+@media(max-width:600px){.cv-actions{display:grid}.cv-actions .btn{width:100%}.email-actions{flex-direction:column;gap:12px}.copy-email{width:100%;max-width:220px}}
