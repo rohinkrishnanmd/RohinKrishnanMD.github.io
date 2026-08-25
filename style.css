@@ -57,3 +57,7 @@ a.orcid img{display:block;width:24px;height:24px;flex:none}
 .about-story p{margin:0 0 20px;color:#d2dce2;font-size:1rem;line-height:1.9}
 .about-story p:last-child{margin-bottom:0}
 @media(max-width:600px){.about-story{padding:25px 22px}.about-story p{font-size:.96rem;line-height:1.78}}
+
+/* Publication profile links */
+.publication-profiles{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 16px}
+@media(max-width:600px){.publication-profiles{display:grid}.publication-profiles .btn{width:100%}}
