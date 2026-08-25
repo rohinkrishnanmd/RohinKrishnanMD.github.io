@@ -69,3 +69,17 @@ a.orcid img{display:block;width:24px;height:24px;flex:none}
 .profile-icon svg{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .profile-icon:hover{transform:translateY(-2px);background:rgba(219,162,75,.1);border-color:var(--gold-light)}
 @media(max-width:600px){.publication-profiles{display:flex}.profile-icon{width:44px;height:44px}}
+
+/* Slightly more compact full-desktop presentation */
+@media(min-width:1321px){
+  html{font-size:90%}
+  .nav{min-height:68px}
+  nav a{padding-top:25px;padding-bottom:22px}
+  nav a::after{bottom:16px}
+  .hero,.hero-grid{min-height:594px}
+  .portrait-wrap{height:594px}
+  .hero-copy{padding:65px 0 74px 49px;transform:translateY(34px)}
+  .training-card{min-height:185px;padding:28px 25px 26px}
+  .section{padding:86px 0}
+  .contact{padding:74px 0}
+}
