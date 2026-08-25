@@ -24,6 +24,7 @@ a.linkedin svg{width:19px;height:19px;flex:none}
 .email-actions{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}
 .email-actions .email{margin-top:0}
 .copy-email{min-height:40px;padding:9px 16px;border:1px solid rgba(219,162,75,.8);border-radius:999px;background:transparent;color:#f6e9d3;font:800 .68rem var(--sans);letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+.copy-email svg{width:17px;height:17px;margin-right:7px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .copy-email:hover{transform:translateY(-2px);background:rgba(219,162,75,.1);border-color:var(--gold-light)}
 .copy-email:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
 .copy-status{min-height:1.2em;margin:8px 0 0;color:var(--gold-light);font-size:.78rem}
