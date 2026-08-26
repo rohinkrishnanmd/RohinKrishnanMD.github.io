@@ -233,9 +233,10 @@
   <section id="contact" class="contact">
     <div class="shell center">
       <h2>Get in Touch</h2>
+      <p class="contact-intro">I welcome inquiries about research collaborations, invited teaching and presentations, and mentorship for students and trainees interested in Emergency Medicine, Critical Care Medicine, and clinical epidemiology.</p>
       <div class="email-actions">
-        <a class="email" href="mailto:rohinkrishnanMD@gmail.com">rohinkrishnanMD@gmail.com</a>
-        <button class="copy-email" type="button" data-email="rohinkrishnanMD@gmail.com" aria-describedby="copy-status" aria-label="Copy email address" title="Copy email address">
+        <a class="btn primary contact-email" href="mailto:rohinkrishnanMD@gmail.com">Send Email</a>
+        <button class="copy-email" type="button" data-email="rohinkrishnanMD@gmail.com" data-tooltip="Copy email" aria-describedby="copy-status" aria-label="Copy email address">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="8" y="8" width="11" height="11" rx="2"></rect>
             <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
@@ -256,7 +257,7 @@
       <path fill="currentColor"
         d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.1 20.45H3.54V9H7.1v11.45z"/>
     </svg>
-    <span>Connect on LinkedIn</span>
+    <span><span class="social-prefix">Connect on </span>LinkedIn</span>
   </a>
   <a href="https://orcid.org/0009-0003-6571-9278"
      target="_blank"
@@ -264,7 +265,7 @@
      class="linkedin orcid"
      aria-label="View Rohin Krishnan's ORCID record - 0009-0003-6571-9278">
     <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="24" height="24">
-    <span>View ORCID</span>
+    <span><span class="social-prefix">View </span>ORCID</span>
   </a>
   <a href="https://scholar.google.com/citations?user=0h7a8ssAAAAJ&amp;hl=en"
      target="_blank"
@@ -293,6 +294,7 @@ copyEmail?.addEventListener('click',async()=>{
   try{
     await navigator.clipboard.writeText(email);
     copyEmail.setAttribute('aria-label','Email copied');
+    copyEmail.dataset.tooltip='Copied!';
     copyStatus.textContent='Email address copied to clipboard.';
   }catch{
     const input=document.createElement('textarea');
@@ -304,9 +306,10 @@ copyEmail?.addEventListener('click',async()=>{
     document.execCommand('copy');
     input.remove();
     copyEmail.setAttribute('aria-label','Email copied');
+    copyEmail.dataset.tooltip='Copied!';
     copyStatus.textContent='Email address copied to clipboard.';
   }
-  window.setTimeout(()=>{copyEmail.setAttribute('aria-label','Copy email address');copyStatus.textContent=''},2200);
+  window.setTimeout(()=>{copyEmail.setAttribute('aria-label','Copy email address');copyEmail.dataset.tooltip='Copy email';copyStatus.textContent=''},2200);
 });
 const sections=[...document.querySelectorAll('main section[id]')];
 const navLinks=[...document.querySelectorAll('nav a')];
