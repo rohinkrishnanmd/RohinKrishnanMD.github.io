@@ -111,3 +111,9 @@ a.orcid img{display:block;width:24px;height:24px;flex:none}
   .publication-actions label{margin-bottom:-5px}
   .publication-actions select,.publication-toggle{width:100%}
 }
+
+
+/* Direct PubMed record badges */
+.pubs .pubmed-link{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;margin-left:9px;border:1px solid rgba(219,162,75,.72);border-radius:7px;color:var(--gold-light);font:800 .58rem/1 var(--sans);letter-spacing:-.02em;text-decoration:none;vertical-align:middle;transform:translateY(-1px);transition:color .2s,background .2s,border-color .2s,transform .2s}
+.pubs .pubmed-link:hover{background:var(--gold-light);border-color:var(--gold-light);color:var(--ink);transform:translateY(-2px)}
+.pubs .pubmed-link:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
