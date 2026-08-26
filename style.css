@@ -94,3 +94,20 @@ a.orcid img{display:block;width:24px;height:24px;flex:none}
 @media(min-width:881px){
   .portrait{transform:translateY(-32px);transform-origin:bottom center}
 }
+
+/* Sortable, expandable publication list */
+.publication-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:-4px 0 22px;padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025)}
+.publication-summary{color:#d5dde3;font-size:.88rem;font-weight:700}
+.publication-actions{display:flex;align-items:center;gap:10px}
+.publication-actions label{color:var(--muted);font-size:.78rem;font-weight:700}
+.publication-actions select,.publication-toggle{min-height:42px;border:1px solid rgba(219,162,75,.65);border-radius:999px;background:#0a1d2c;color:#f6e9d3;font:750 .75rem var(--sans)}
+.publication-actions select{padding:0 38px 0 15px}
+.publication-toggle{padding:0 18px;cursor:pointer;transition:background .2s,border-color .2s}
+.publication-toggle:hover{background:rgba(219,162,75,.1);border-color:var(--gold-light)}
+.pubs article[hidden]{display:none}
+.pubs .publication-title{font:700 1.06rem/1.5 var(--serif)}
+@media(max-width:600px){
+  .publication-toolbar,.publication-actions{align-items:stretch;flex-direction:column}
+  .publication-actions label{margin-bottom:-5px}
+  .publication-actions select,.publication-toggle{width:100%}
+}
