@@ -150,7 +150,7 @@
 
   <section id="publications" class="section alt">
     <div class="shell">
-      <h2>Key Publications</h2>
+      <h2>Key Publications &amp; Conferences</h2>
       <div class="gold-rule short" aria-hidden="true"></div>
       <div class="publication-profiles" aria-label="Research profiles">
         <a class="profile-icon orcid-icon" href="https://orcid.org/0009-0003-6571-9278" target="_blank" rel="noopener noreferrer" aria-label="View ORCID profile" title="ORCID">
@@ -160,7 +160,12 @@
           <img src="https://scholar.google.com/favicon.ico" alt="" width="25" height="25">
         </a>
       </div>
-      <p class="section-intro">Selected peer-reviewed work. Expand the list to browse all 14 journal articles.</p>
+      <p class="section-intro">Selected peer-reviewed work and conference presentations. Choose a tab, then expand the list to browse every entry.</p>
+      <div class="publication-tabs" role="tablist" aria-label="Scholarly work">
+        <button class="publication-tab active" id="publications-tab" type="button" role="tab" aria-selected="true" aria-controls="publications-panel">Publications <span>14</span></button>
+        <button class="publication-tab" id="conferences-tab" type="button" role="tab" aria-selected="false" aria-controls="conferences-panel" tabindex="-1">Conferences <span>18</span></button>
+      </div>
+      <div class="publication-panel" id="publications-panel" role="tabpanel" aria-labelledby="publications-tab">
       <div class="publication-toolbar">
         <div class="publication-summary" id="publication-summary" aria-live="polite">Showing 5 selected publications</div>
         <div class="publication-actions">
@@ -191,6 +196,34 @@
         <article data-year="2016" data-title="Comparing sutures versus staples" data-order="14" data-selected="false" hidden><div class="publication-meta"><div class="year">2016</div><a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/26792213/" target="_blank" rel="noopener noreferrer" aria-label="View this publication on PubMed" title="View on PubMed"></a></div><div><span class="publication-title">Comparing sutures versus staples for skin closure after orthopaedic surgery: systematic review and meta-analysis.</span><p><b>Krishnan RJ</b>, MacNeil SD, Malvankar-Mehta MS. <i>BMJ Open.</i> 2016;6(1):e009257.</p></div></article>
       </div>
       <div class="center"><a class="btn primary" href="Rohin_Krishnan_CV.pdf" target="_blank" rel="noopener">Complete Publication List in CV</a></div>
+      </div>
+      <div class="publication-panel" id="conferences-panel" role="tabpanel" aria-labelledby="conferences-tab" hidden>
+        <div class="publication-toolbar">
+          <div class="publication-summary" id="conference-summary" aria-live="polite">Showing 5 selected conferences</div>
+          <div class="publication-actions"><label for="conference-sort">Sort by</label><select id="conference-sort"><option value="featured">Featured order</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A-Z</option></select><button class="publication-toggle" id="conference-toggle" type="button" aria-expanded="false" aria-controls="conference-list">Show all 18</button></div>
+        </div>
+        <div class="pubs conferences" id="conference-list">
+          <article class="featured" data-year="2020" data-title="Role of hospitalization" data-order="1" data-selected="true"><div class="publication-meta"><div class="year">2020</div><span class="presentation-type">Oral</span></div><div><span class="publication-title">Role of hospitalization for detection of serious adverse events among emergency department patients with syncope.</span><p><b>Presenter</b> · CAEP · Ottawa, Ontario <span class="conference-note">Cancelled due to COVID-19</span></p></div></article>
+          <article data-year="2019" data-title="Benefit of hospitalisation Hawaii" data-order="2" data-selected="true"><div class="publication-meta"><div class="year">2019</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Benefit of hospitalisation for emergency department patients with syncope.</span><p><b>Presenter</b> · Hawaii Health Workforce Summit · Honolulu, Hawaii</p></div></article>
+          <article data-year="2019" data-title="Risk of infection" data-order="3" data-selected="true"><div class="publication-meta"><div class="year">2019</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Is the risk of infection lower with sutures than with staples after orthopaedic surgery?</span><p><b>Presenter</b> · University of Hawaii Biomedical Sciences and Health Disparities Symposium · Honolulu, Hawaii</p></div></article>
+          <article data-year="2016" data-title="Antibiotics versus appendectomy CSEB" data-order="4" data-selected="true"><div class="publication-meta"><div class="year">2016</div><span class="presentation-type">Oral</span></div><div><span class="publication-title">Antibiotics versus appendectomy for uncomplicated appendicitis: a global health perspective.</span><p><b>Presenter</b> · CSEB Biannual Student Conference · Winnipeg, Manitoba</p></div></article>
+          <article data-year="2016" data-title="Antibiotics versus appendectomy London" data-order="5" data-selected="true"><div class="publication-meta"><div class="year">2016</div><span class="presentation-type">Oral</span></div><div><span class="publication-title">Antibiotics versus appendectomy for uncomplicated appendicitis: a global health perspective.</span><p><b>Presenter</b> · London Health Research Day Annual Conference · London, Ontario</p></div></article>
+          <article data-year="2019" data-title="Benefit of hospitalisation CANet" data-order="6" data-selected="false" hidden><div class="publication-meta"><div class="year">2019</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Benefit of hospitalisation for emergency department patients with syncope.</span><p>CANet HQP Symposium · Montreal, Quebec</p></div></article>
+          <article data-year="2019" data-title="Short-term arrhythmia" data-order="7" data-selected="false" hidden><div class="publication-meta"><div class="year">2019</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Short-term arrhythmia among emergency department syncope patients with atrial fibrillation.</span><p>CANet HQP Symposium · Montreal, Quebec</p></div></article>
+          <article data-year="2018" data-title="Risk factors Quebec" data-order="8" data-selected="false" hidden><div class="publication-meta"><div class="year">2018</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Risk factors and outcomes of metastatic cutaneous squamous cell carcinoma in the head and neck region.</span><p>CSOHNS Annual General Meeting · Quebec City, Quebec</p></div></article>
+          <article data-year="2018" data-title="Risk factors Baltimore" data-order="9" data-selected="false" hidden><div class="publication-meta"><div class="year">2018</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Risk factors and outcomes of metastatic cutaneous squamous cell carcinoma in the head and neck region.</span><p>AHNS Annual Meeting · Baltimore, Maryland</p></div></article>
+          <article data-year="2018" data-title="Sex-specific association" data-order="10" data-selected="false" hidden><div class="publication-meta"><div class="year">2018</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Sex-specific association between alcohol consumption and incidence of hypertension.</span><p>Society of Epidemiologic Research Annual Meeting · Baltimore, Maryland</p></div></article>
+          <article data-year="2018" data-title="Risk of infection London" data-order="11" data-selected="false" hidden><div class="publication-meta"><div class="year">2018</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Is the risk of infection lower with sutures than with staples after orthopaedic surgery?</span><p>London Health Research Day · London, Ontario</p></div></article>
+          <article data-year="2017" data-title="Alcohol and hypertension" data-order="12" data-selected="false" hidden><div class="publication-meta"><div class="year">2017</div><span class="presentation-type">Oral</span></div><div><span class="publication-title">Alcohol consumption and sex-specific incidence of hypertension.</span><p>Canadian Hypertension Congress · Toronto, Ontario</p></div></article>
+          <article data-year="2017" data-title="Topical silver" data-order="13" data-selected="false" hidden><div class="publication-meta"><div class="year">2017</div><span class="presentation-type">Oral</span></div><div><span class="publication-title">The effectiveness of topical silver colloid in recalcitrant chronic rhinosinusitis.</span><p>CSOHSN Annual General Meeting · Saskatoon, Saskatchewan</p></div></article>
+          <article data-year="2016" data-title="Transfusion Vancouver" data-order="14" data-selected="false" hidden><div class="publication-meta"><div class="year">2016</div><span class="presentation-type">Oral</span></div><div><span class="publication-title">Transfusion triggers in critical care and perioperative patients.</span><p>Canadian Anesthesiology Society Annual Meeting · Vancouver, British Columbia</p></div></article>
+          <article data-year="2016" data-title="Parathyroidectomy" data-order="15" data-selected="false" hidden><div class="publication-meta"><div class="year">2016</div><span class="presentation-type">Oral</span></div><div><span class="publication-title">Does parathyroidectomy reverse mortality risk in primary hyperparathyroidism?</span><p>American Head and Neck Society 9th International Conference · Seattle, Washington</p></div></article>
+          <article data-year="2016" data-title="Pneumocystis pneumonia" data-order="16" data-selected="false" hidden><div class="publication-meta"><div class="year">2016</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Pneumocystis pneumonia following solid organ transplantation.</span><p>American Transplant Congress · Boston, Massachusetts</p></div></article>
+          <article data-year="2016" data-title="Mentoring needs" data-order="17" data-selected="false" hidden><div class="publication-meta"><div class="year">2016</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Mentoring needs of distributed medical education faculty at one Canadian medical school.</span><p><b>Presenter</b> · Canadian Society of Rural Physicians · Charlevoix, Quebec</p></div></article>
+          <article data-year="2016" data-title="Transfusion Minneapolis" data-order="18" data-selected="false" hidden><div class="publication-meta"><div class="year">2016</div><span class="presentation-type">Poster</span></div><div><span class="publication-title">Transfusion triggers in critical care and perioperative patients.</span><p>Midwest Anesthesia Resident Conference · Minneapolis, Minnesota</p></div></article>
+        </div>
+        <div class="center"><a class="btn primary" href="Rohin_Krishnan_CV.pdf" target="_blank" rel="noopener">Complete Conference List in CV</a></div>
+      </div>
     </div>
   </section>
 
@@ -314,30 +347,33 @@ copyEmail?.addEventListener('click',async()=>{
 const sections=[...document.querySelectorAll('main section[id]')];
 const navLinks=[...document.querySelectorAll('nav a')];
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(link=>link.removeAttribute('aria-current'));document.querySelector(`nav a[href="#${entry.target.id}"]`)?.setAttribute('aria-current','page')}}),{rootMargin:'-35% 0px -60%'});sections.forEach(section=>observer.observe(section))}
-const publicationList=document.getElementById('publication-list');
-const publicationSort=document.getElementById('publication-sort');
-const publicationToggle=document.getElementById('publication-toggle');
-const publicationSummary=document.getElementById('publication-summary');
-let showingAll=false;
-const sortPublications=()=>{
-  const articles=[...publicationList.querySelectorAll('article')];
-  const mode=publicationSort.value;
+const setupExpandableList=({listId,sortId,toggleId,summaryId,total,selected,label})=>{
+ const list=document.getElementById(listId),sort=document.getElementById(sortId),toggle=document.getElementById(toggleId),summary=document.getElementById(summaryId);
+ let showingAll=false;
+ const sortItems=()=>{
+  const articles=[...list.querySelectorAll('article')];
+  const mode=sort.value;
   articles.sort((a,b)=>{
     if(mode==='newest')return Number(b.dataset.year)-Number(a.dataset.year)||Number(a.dataset.order)-Number(b.dataset.order);
     if(mode==='oldest')return Number(a.dataset.year)-Number(b.dataset.year)||Number(a.dataset.order)-Number(b.dataset.order);
     if(mode==='title')return a.dataset.title.localeCompare(b.dataset.title);
     return Number(a.dataset.order)-Number(b.dataset.order);
   });
-  articles.forEach(article=>publicationList.appendChild(article));
+  articles.forEach(article=>list.appendChild(article));
+ };
+ const updateView=()=>{
+  list.querySelectorAll('article').forEach(article=>{article.hidden=!showingAll&&article.dataset.selected!=='true'});
+  toggle.textContent=showingAll?'Show selected only':`Show all ${total}`;
+  toggle.setAttribute('aria-expanded',String(showingAll));
+  summary.textContent=showingAll?`Showing all ${total} ${label}`:`Showing ${selected} selected ${label}`;
+ };
+ sort?.addEventListener('change',sortItems);
+ toggle?.addEventListener('click',()=>{showingAll=!showingAll;updateView()});
 };
-const updatePublicationView=()=>{
-  publicationList.querySelectorAll('article').forEach(article=>{article.hidden=!showingAll&&article.dataset.selected!=='true'});
-  publicationToggle.textContent=showingAll?'Show selected only':'Show all 14';
-  publicationToggle.setAttribute('aria-expanded',String(showingAll));
-  publicationSummary.textContent=showingAll?'Showing all 14 peer-reviewed articles':'Showing 5 selected publications';
-};
-publicationSort?.addEventListener('change',sortPublications);
-publicationToggle?.addEventListener('click',()=>{showingAll=!showingAll;updatePublicationView()});
+setupExpandableList({listId:'publication-list',sortId:'publication-sort',toggleId:'publication-toggle',summaryId:'publication-summary',total:14,selected:5,label:'publications'});
+setupExpandableList({listId:'conference-list',sortId:'conference-sort',toggleId:'conference-toggle',summaryId:'conference-summary',total:18,selected:5,label:'conferences'});
+const publicationTabs=[...document.querySelectorAll('.publication-tab')];
+publicationTabs.forEach(tab=>tab.addEventListener('click',()=>publicationTabs.forEach(item=>{const active=item===tab;item.classList.toggle('active',active);item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;document.getElementById(item.getAttribute('aria-controls')).hidden=!active})));
 </script>
 </body>
 </html>
