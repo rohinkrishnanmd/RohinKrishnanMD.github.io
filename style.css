@@ -96,6 +96,14 @@ a.orcid img{display:block;width:24px;height:24px;flex:none}
 }
 
 /* Sortable, expandable publication list */
+.publication-tabs{display:inline-flex;gap:5px;margin:0 0 22px;padding:5px;border:1px solid var(--line);border-radius:999px;background:#081a28}
+.publication-tab{min-height:44px;padding:0 22px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:800 .78rem var(--sans);letter-spacing:.025em;cursor:pointer;transition:color .2s,background .2s,box-shadow .2s}
+.publication-tab span{display:inline-flex;align-items:center;justify-content:center;min-width:23px;height:23px;margin-left:7px;border-radius:999px;background:rgba(255,255,255,.07);font-size:.68rem}
+.publication-tab:hover{color:#f6e9d3}
+.publication-tab.active{background:var(--gold);color:#071825;box-shadow:0 5px 18px rgba(0,0,0,.25)}
+.publication-tab.active span{background:rgba(7,24,37,.14)}
+.publication-tab:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
+.publication-panel[hidden]{display:none}
 .publication-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:-4px 0 22px;padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025)}
 .publication-summary{color:#d5dde3;font-size:.88rem;font-weight:700}
 .publication-actions{display:flex;align-items:center;gap:10px}
@@ -106,7 +114,10 @@ a.orcid img{display:block;width:24px;height:24px;flex:none}
 .publication-toggle:hover{background:rgba(219,162,75,.1);border-color:var(--gold-light)}
 .pubs article[hidden]{display:none}
 .pubs .publication-title{font:700 1.06rem/1.5 var(--serif)}
+.presentation-type{display:inline-block;padding:4px 8px;border:1px solid rgba(219,162,75,.5);border-radius:999px;color:var(--gold-light);font:800 .62rem var(--sans);letter-spacing:.07em;text-transform:uppercase}
+.conference-note{display:inline-block;margin-left:7px;color:var(--gold-light);font-size:.76rem}
 @media(max-width:600px){
+  .publication-tabs{display:flex;width:100%}.publication-tab{flex:1;padding:0 10px}
   .publication-toolbar,.publication-actions{align-items:stretch;flex-direction:column}
   .publication-actions label{margin-bottom:-5px}
   .publication-actions select,.publication-toggle{width:100%}
